@@ -1,0 +1,34 @@
+package BasicJavaPrograms;
+//Perform right rotate with String array
+import java.util.Arrays;
+
+public class Array12 {
+
+	public static void rightRotate(String[] s, int n)
+	{
+		String temp = s[n-1];
+			for (int i = n-2; i>=0 ; i--) 
+			{
+			
+				s[i+1] = s[i];
+				
+			}
+			
+			s[0] = temp;
+			
+	
+		System.out.println(Arrays.toString(s));
+	}
+
+	public static void main(String[] args) 
+	{
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		
+		String[] s = {"Win1","Win2","Win3","Win4","Win5"};
+		
+		
+		System.out.println(Arrays.toString(s));
+		
+		rightRotate(s,sc.nextInt());
+	}
+}

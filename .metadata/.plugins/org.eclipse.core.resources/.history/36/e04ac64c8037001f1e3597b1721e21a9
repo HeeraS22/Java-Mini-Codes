@@ -1,0 +1,13 @@
+package UserdefinedExceptionEx;
+
+class LowSpeedException extends Exception {
+
+}
+
+class AverageSpeedException extends Exception {
+
+}
+
+class OverSpeedException extends Exception {
+
+}

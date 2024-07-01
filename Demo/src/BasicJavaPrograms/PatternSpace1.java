@@ -1,0 +1,33 @@
+package BasicJavaPrograms;
+
+public class PatternSpace1 {
+	public static void p(int row)
+	{
+		for(int i=1;i<=row;i++)
+		{
+			System.out.print("*");
+		}
+	}
+	public static void space(int s)
+	{
+		for(int i=1;i<=s;i++)
+		{
+			System.out.print(" ");
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		int row=3;
+
+		for(int i=1;i<=row;i++)
+		{
+			p(4);
+			space(2);
+			p(4);
+			System.out.println();
+		}
+
+	}
+
+}

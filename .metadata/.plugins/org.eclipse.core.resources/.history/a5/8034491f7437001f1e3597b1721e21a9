@@ -1,0 +1,360 @@
+package com.Heera.JavaBasicPrograms;
+
+import java.util.Scanner;
+
+public class NamePattern 
+{
+	static int row;
+	static int mid;
+	static int delay;
+	public static void H(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==mid) || j==1 || j==row)
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void E(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1) || j==1 || (i==row) || (i==mid && j!=row && j!=row-1))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void B(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1 && j!=row) || (i==mid && j!=row) || (i==row && j!=row) 
+					|| j==1 || (j==row && i!=1 && i!=mid && i!=row))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void C(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((j==1 && i!=1 && i!=row) || (i==1 && j!=1) || (i==row && j!=1))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	
+	public static void A(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((j==1 && i!=1) || (j==row && i!=1) || (i==mid) || (i==1 && j!=1 && j!=row))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	
+	public static void D(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1 && j!=row) || (i==row && j!=row) || j==1 
+					|| (j==row && i!=1 && i!=row))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	
+	public static void F(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1) || j==1 || (i==mid && j!=row && j!=row-1))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void G(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((j==1 && i!=1 && i!=row) || (i==1 && j!=1) || (i==row && j!=1 && j!=row) || 
+					(i==mid && j>mid ) ||(j==row && i>mid && i!=row))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void I(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1) || i==row || j==mid)
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void J(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if(i==1 || (i==row && j<mid && j!=1) || 
+					(j==mid && i!=row) || (j==1 && i==(row-1)))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void K(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if(j==1 || (i+j==mid+1) || (i-j==mid-1))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void L(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if(j==1 || i==row )
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void M(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if(j==1 || (j==i && j<=mid) ||(j==row ) ||(i+j==row+1 && j>mid))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void N(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if(j==1 || j==row || i==j)       
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void O(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1 && j!=row && j!=1) || (i==row && j!=row && j!=1) || 
+					(j==1 && i!=1 && i!=row)|| (j==row && i!=1 && i!=row))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void P(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1 && j<=mid && j!=mid) || (i==mid && j!=mid && j<=mid) 
+					|| j==1 || (j==mid && i!=1 && i!=mid && i<=mid) )
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void Q(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1 && j!=row && j!=1) || (i==row-1 && j!=row && j!=1 ) || (j==i && j>=mid)||
+					(j==1 && i!=1 && i!=row-1 && i!=row)|| (j==row && i!=1 && i!=row-1))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+	}
+	public static void R(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1 && j<=mid && j!=mid) || (i==mid && j!=mid && j<=mid) || (i-j==mid-1)
+			|| j==1 || (j==mid && i!=1 && i!=mid && i<=mid) )
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+	
+		}
+	}
+	public static void S(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1 && j!=1) || (i==row && j!=row ) || 
+					(j==1 && i<=mid && i!=1 && i!=row )|| i== mid || (j==row && i>=mid && i!=1 && i!=row))
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+	
+		}
+	}
+	public static void T(int i) throws InterruptedException
+	{
+		for(int j=1;j<=row;j++)
+		{
+			if((i==1)|| (j==mid) )
+			{
+				Thread.sleep(delay);
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+	
+		}
+	}
+	
+	public static void space()
+	{
+		for(int j=1;j<=3;j++)
+		{
+			System.out.print(" ");
+		}
+	}
+	
+	public static void chooseCharacter(int n, int i)throws Exception
+	{
+		switch(n)
+		{
+		case 65 : A(i); break;
+		case 66 : B(i); break;
+		case 67 : C(i); break;
+		case 68 : D(i); break;
+		case 69 : E(i); break;
+		case 70 : F(i); break;
+		case 71 : G(i); break;
+		case 72 : H(i); break;
+		case 73 : I(i); break;
+		case 74 : J(i); break;
+		case 75 : K(i); break;
+		case 76 : L(i); break;
+		case 77 : M(i); break;
+		case 78 : N(i); break;
+		case 79 : O(i); break;
+		case 80 : P(i); break;
+		case 81 : Q(i); break;
+		case 82 : R(i); break;
+		case 83 : S(i); break;
+		case 84 : T(i); break;
+		
+		}
+	}
+
+	public static void main(String[] args) throws Exception 
+	{
+		Scanner sc = new Scanner(System.in);
+		row = 11;
+		mid = row/2+1;
+		delay=30;
+		
+		
+		String s = sc.next();
+		
+//		for(int i=1;i<=row;i++)
+//		{
+//			H(i);
+//			space();
+//			E(i);
+//			space();
+//			E(i);
+//			space();
+//			R(i);
+//			space();
+//			A(i);
+//			System.out.println();
+//		}
+		
+		for(int i=1;i<=row;i++)
+		{
+			for(int j=0;j<s.length();j++)
+			{
+				char c = s.charAt(j);
+				int x = c;
+				chooseCharacter(x, i);
+				space();
+			}
+		
+		System.out.println();
+		}
+	}
+}
+

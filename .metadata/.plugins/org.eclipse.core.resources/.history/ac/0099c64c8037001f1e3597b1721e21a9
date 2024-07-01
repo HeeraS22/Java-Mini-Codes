@@ -1,0 +1,22 @@
+package UserdefinedExceptionEx;
+
+public class SpeedChecking 
+{
+	int speed;
+	
+	public SpeedChecking(int speed) {
+		super();
+		this.speed = speed;
+	}
+
+	
+	public void checkSpeed() throws LowSpeedException,AverageSpeedException,OverSpeedException
+	{
+		if(speed>=1 && speed<=40)
+			throw new LowSpeedException();
+		else if(speed>=41 && speed<=70)
+			throw new AverageSpeedException();
+		else 
+			throw new OverSpeedException();
+	}
+}

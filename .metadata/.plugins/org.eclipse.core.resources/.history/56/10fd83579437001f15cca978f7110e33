@@ -1,0 +1,383 @@
+package com.Heera.JavaBasicPrograms;
+//Print the name in the pattern format
+import java.util.Scanner;
+
+public class NamePattern {
+    static int row;
+    static int mid;
+    static int delay;
+
+    public static void H(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (j == 1 || j == row || i == mid) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void E(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (i == 1 || i == mid || i == row || j == 1) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void B(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (i == 1 || i == mid || i == row || j == 1 || (j == row && i != 1 && i != mid && i != row)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void C(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((j == 1 && i != 1 && i != row) || (i == 1 && j != 1) || (i == row && j != 1)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void A(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((j == 1 && i != 1) || (j == row && i != 1) || i == mid || (i == 1 && j != 1 && j != row)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void D(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (i == 1 || i == row || j == 1 || (j == row && i != 1 && i != row)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void F(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (i == 1 || j == 1 || i == mid) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void G(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((j == 1 && i != 1 && i != row) || (i == 1 && j != 1) || (i == row && j != 1 && j != row) || (i == mid && j > mid) || (j == row && i > mid && i != row)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void I(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (i == 1 || i == row || j == mid) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void J(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (i == 1 || (i == row && j < mid && j != 1) || (j == mid && i != row) || (j == 1 && i == row - 1)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void K(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (j == 1 || (i + j == mid + 1) || (i - j == mid - 1)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void L(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (j == 1 || i == row) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void M(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (j == 1 || j == row || (j == i && j <= mid) || (i + j == row + 1 && j > mid)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void N(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (j == 1 || j == row || i == j) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void O(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((i == 1 && j != row && j != 1) || (i == row && j != row && j != 1) || (j == 1 && i != 1 && i != row) || (j == row && i != 1 && i != row)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void P(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((i == 1 && j <= mid && j != mid) || (i == mid && j != mid && j <= mid) || j == 1 || (j == mid && i != 1 && i != mid && i <= mid)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void Q(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((i == 1 && j != row && j != 1) || (i == row - 1 && j != row && j != 1) || (j == i && j >= mid) || (j == 1 && i != 1 && i != row - 1 && i != row) || (j == row && i != 1 && i != row - 1)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void R(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((i == 1 && j <= mid && j != mid) || (i == mid && j != mid && j <= mid) || (i - j == mid - 1) || j == 1 || (j == mid && i != 1 && i != mid && i <= mid)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void S(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((i == 1 && j != 1) || (i == row && j != row) || (j == 1 && i <= mid && i != 1 && i != row) || i == mid || (j == row && i >= mid && i != 1 && i != row)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void T(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (i == 1 || j == mid) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void U(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((j == 1 && i != row) || (j == row && i != row) || (i == row && j != 1 && j != row)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void V(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((j == i && i <= mid) || (j == row - i + 1 && i <= mid)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void W(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (j == 1 || j == row || (i + j == row + 1 && i > mid) || (i == j && i > mid)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void X(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (i == j || i + j == row + 1) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void Y(int i) {
+        for (int j = 1; j <= row; j++) {
+            if ((i == j && i <= mid) || (i + j == row + 1 && i <= mid) || (j == mid && i > mid)) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void Z(int i) {
+        for (int j = 1; j <= row; j++) {
+            if (i == 1 || i == row || i + j == row + 1) {
+                System.out.print("*");
+            } else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void space() {
+        for (int j = 1; j <= 3; j++) {
+            System.out.print(" ");
+        }
+    }
+
+    public static void chooseCharacter(char c, int i) {
+        switch (c) {
+            case 'A':
+                A(i);
+                break;
+            case 'B':
+                B(i);
+                break;
+            case 'C':
+                C(i);
+                break;
+            case 'D':
+                D(i);
+                break;
+            case 'E':
+                E(i);
+                break;
+            case 'F':
+                F(i);
+                break;
+            case 'G':
+                G(i);
+                break;
+            case 'H':
+                H(i);
+                break;
+            case 'I':
+                I(i);
+                break;
+            case 'J':
+                J(i);
+                break;
+            case 'K':
+                K(i);
+                break;
+            case 'L':
+                L(i);
+                break;
+            case 'M':
+                M(i);
+                break;
+            case 'N':
+                N(i);
+                break;
+            case 'O':
+                O(i);
+                break;
+            case 'P':
+                P(i);
+                break;
+            case 'Q':
+                Q(i);
+                break;
+            case 'R':
+                R(i);
+                break;
+            case 'S':
+                S(i);
+                break;
+            case 'T':
+                T(i);
+                break;
+            case 'U':
+                U(i);
+                break;
+            case 'V':
+                V(i);
+                break;
+            case 'W':
+                W(i);
+                break;
+            case 'X':
+                X(i);
+                break;
+            case 'Y':
+                Y(i);
+                break;
+            case 'Z':
+                Z(i);
+                break;
+            default:
+                for (int j = 1; j <= row; j++) {
+                    System.out.print(" ");
+                }
+                break;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        row = 11;
+        mid = (row + 1) / 2;
+        delay = 30;
+
+        String s = sc.next().toUpperCase();
+        sc.close();
+
+        for (int i = 1; i <= row; i++) {
+            for (int j = 0; j < s.length(); j++) {
+                char c = s.charAt(j);
+                chooseCharacter(c, i);
+                space();
+            }
+            System.out.println();
+        }
+    }
+}
+

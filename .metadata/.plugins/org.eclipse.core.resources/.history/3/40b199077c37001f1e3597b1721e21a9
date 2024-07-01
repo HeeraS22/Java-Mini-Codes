@@ -1,0 +1,29 @@
+package com.Heera.JavaBasicPrograms;
+//Check whether the number is Perfect square or not in a given range
+public class PerfectSquareRange 
+{					
+	public static void perfectSquare(int m, int n)
+	{
+		for(int j=m;j<=n;j++)
+		{
+			int num=j;
+			for(int i=1;i<=num/2;i++)
+			{
+				if(i*i==num)
+				{
+					System.out.println(num);
+					break;
+				}
+			
+			}
+		}
+	}
+	public static void main(String[] args) 
+	{
+		int m = 1;
+		int n = 100;
+		perfectSquare(m, n);
+
+	}
+
+}

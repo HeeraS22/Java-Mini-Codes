@@ -1,0 +1,54 @@
+package com.Heera.JavaBasicPrograms;
+//Check the Parenthesis are balanced or not in the given string
+import java.util.Stack;
+
+public class Stack4 
+{
+
+    public static boolean parenthesis(String str) 
+    {
+        if (str.isEmpty()) 
+        {
+            System.out.println("Parenthesis are not present");
+        }
+        
+        Stack<Character> stk = new Stack<Character>();
+        
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            
+            if (c == '{' || c == '(' || c == '[') {
+                stk.push(c);
+            }
+
+            if (c == '}' || c == ')' || c == ']') {
+                if (stk.isEmpty()) {
+                    
+                    return false;
+                }
+
+                char last = stk.pop(); 
+
+                if (c == '}' && last != '{' || c == ')' && last != '(' || c == ']' && last != '[') {
+                    
+                    return false;
+                }
+            }
+        }
+
+        return stk.isEmpty();
+    }
+
+    public static void main(String[] args) 
+    {
+        String str = "({[]})";
+        if(parenthesis(str)) 
+        {
+            System.out.println("Parenthesis are balanced");
+        } 
+        else 
+        {
+            System.out.println("Unmatched parenthesis");
+        }
+    }
+}

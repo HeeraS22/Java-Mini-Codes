@@ -1,0 +1,44 @@
+package UserdefinedExceptionEx;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Exception1 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the speed");
+		try
+		{
+			int speed = sc.nextInt();
+			SpeedChecking s = new SpeedChecking(speed);
+			try
+			{
+			s.checkSpeed();
+			}
+			catch (LowSpeedException e) 
+			{
+				System.out.println("Your speed is low");
+			}
+			catch (AverageSpeedException e) 
+			{
+				System.out.println("Your speed is average");
+			}
+			catch (OverSpeedException e) 
+			{
+				System.out.println("Your are overspeed");
+			}
+		}
+		catch (InputMismatchException e) 
+		{
+			System.out.println("Invalid input");
+		}
+		
+		finally 
+		{
+		    sc.close();
+		}
+		
+	}
+}
